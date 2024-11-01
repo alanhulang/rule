@@ -1,10 +1,16 @@
+# 代理补充列表
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,perplexity.ai
+
+# talkatone
 DOMAIN-SUFFIX,mobilefuse.com
 DOMAIN-SUFFIX,inmobi.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,talkatone.com
 DOMAIN-SUFFIX,kochava.com
 # 这个域名最好走代理，我这边直连已超时
-# DOMAIN-SUFFIX,tktn.be
+DOMAIN-SUFFIX,tktn.be
 DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,agkn.com
@@ -13,3 +19,16 @@ IP-CIDR,50.117.27.0/24
 IP-CIDR,69.46.75.0/24
 IP-CIDR,205.164.56.0/24
 IP-CIDR,63.251.124.0/24
+
+# 域名关键字匹配
+#DOMAIN-KEYWORD,1e100
+
+# IP段匹配
+#IP-CIDR,142.171.133.131/32,no-resolve
+#IP-CIDR,103.115.43.2/32,no-resolve
+
+# 国外DNS
+#DOMAIN-SUFFIX,dns.google
+#DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
+#IP-CIDR,8.8.8.8/32,no-resolve
+#IP-CIDR,8.8.4.4/32,no-resolve
