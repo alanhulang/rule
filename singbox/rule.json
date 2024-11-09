@@ -132,8 +132,8 @@
         "tag": "relay",
         "type": "remote",
         "format": "text",
-        "path": "./ruleset/relay.list",
-        "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/relay.list"
+        "path": "./ruleset/relay.json",
+        "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/relay.json"
       },
       {
         "tag": "private",
@@ -181,8 +181,8 @@
         "tag": "ai",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/ai.srs",
-        "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/ai.srs"
+        "path": "./ruleset/ai.json",
+        "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/ai.json"
       },
       {
         "tag": "networktest",
