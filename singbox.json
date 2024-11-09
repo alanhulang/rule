@@ -55,7 +55,7 @@
       "tag": "🛫 我的机场 1",
       "type": "remote",
       // 机场订阅链接，使用 Clash 链接
-      "download_url": "https://example.com/xxx/xxx&flag=clash",
+      "download_url": "http://192.168.101.205:3001/CKg2abestVnOeRpm1aB4/download/collection/AH_Group01",
       "path": "./providers/airport1.yaml",
       "download_interval": "24h",
       "download_ua": "clash.meta",
