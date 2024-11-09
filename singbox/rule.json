@@ -15,7 +15,7 @@
     { "tag": "🇨🇳 直连 IP", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
     { "tag": "🪜 代理域名", "type": "selector", "outbounds": [ "🚀 节点选择", "🎯 全球直连" ] },
     { "tag": "📲 电报消息", "type": "selector", "outbounds": [ "🚀 节点选择" ] },
-    { "tag": "🔗 链式代理", "type": "relay", "outbounds": [ "自建节点","家宽" ] },
+    { "tag": "🔗 链式代理", "type": "relay", "outbounds": [ "自建节点", "家宽" ] },
     // 若使用 ShellCrash，由于无法判断本机进程（默认删除 `process_name` 规则），需删除此条 `🖥️ 直连软件`
     //{ "tag": "🖥️ 直连软件", "type": "selector", "outbounds": [ "🎯 全球直连" ] },
     { "tag": "🔒 私有网络", "type": "selector", "outbounds": [ "🎯 全球直连" ] },
@@ -55,7 +55,7 @@
       "tag": "🛫 我的机场 1",
       "type": "remote",
       // 机场订阅链接，使用 Clash 链接
-      "download_url": "https://example.com/xxx/xxx&flag=clash",
+      "download_url": "http://192.168.101.205:3001/CKg2abestVnOeRpm1aB4/download/collection/AH_Group01",
       "path": "./providers/airport1.yaml",
       "download_interval": "24h",
       "download_ua": "clash.meta",
