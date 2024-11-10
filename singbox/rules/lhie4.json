@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 1,
   "rules": [
     {
 		"domain": [
@@ -14,14 +14,10 @@
 			"osxapps.itunes.apple.com",
 			"supportdownload.apple.com",
 			"swcdn.apple.com",
-			"updates-http.cdn-apple.com",
-			
-			"DOMAIN-KEYWORD,epicgames",
-			"safebrowsing.googleapis.com",
-			
+			"updates-http.cdn-apple.com",				
+			"safebrowsing.googleapis.com",			
 			"cm.steampowered.com",
-			"ol.epicgames.com",
-			
+			"ol.epicgames.com",			
 			"csgo.wmsj.cn",
 			"dota2.wmsj.cn",
 			"wmsjsteam.com",
@@ -91,8 +87,8 @@
 				"audiences.me",
 				"smtp"
 			],
-		"domain_keyword":
-			[
+		"domain_keyword": [
+				"epicgames",
 				"announce",
 				"torrent"
 			]
