@@ -43,7 +43,7 @@
 			"tesla-cdn.thron.cn",
 			"tesla-cdn.thron.com"
 			],
-		"domain-suffix": [
+		"domain_suffix": [
 				"steamcontent.com",
 				"steamserver.net",
 				"steamchina.com",
@@ -91,7 +91,7 @@
 				"audiences.me",
 				"smtp"
 			],
-		"domain-keyword":
+		"domain_keyword":
 			[
 				"announce",
 				"torrent"
