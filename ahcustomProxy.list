@@ -3,3 +3,4 @@ DOMAIN-SUFFIX,bygcloud.com
 DOMAIN-SUFFIX,tktn.be
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,github.com
+IP-CIDR,131.153.7.0/24
