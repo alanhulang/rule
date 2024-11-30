@@ -89,7 +89,7 @@
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连" },
-      { "rule_set": "relay-group", "outbound": "🇺🇲 美国节点" },
+      #{ "rule_set": "relay-group", "outbound": "🇺🇲 美国节点" },
       { "rule_set": "geosite-chat", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-github", "outbound": "👨‍💻 Github" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
@@ -105,7 +105,7 @@
     ],
     
     "rule_set": [
-      { "tag": "relay-group", "type": "remote", "format": "binary", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.srs", "download_detour": "🎯 全球直连" },
+      #{ "tag": "relay-group", "type": "remote", "format": "binary", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },      
       { "tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连" },
