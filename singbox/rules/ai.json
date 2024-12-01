@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
 		"domain_suffix": [
@@ -21,9 +21,13 @@
 			"gemini.google.com",
 			"makersuite.google.com",
 			"anthropic.com",
-			"claude.ai.com",
+			"claude.ai.com",			
+			"bing.com",
+			"cloud.microsoft"
+		],
+		"domain": [
 			"copilot.microsoft.com",
-			"bing.com"
+			"copilot.cloud.microsoft"
 		]
     }
   ]
