@@ -64,7 +64,7 @@
       "auto_redirect": true,
       "sniff": true,
       "endpoint_independent_nat": false,
-      "stack": "mixed",
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -125,15 +125,8 @@
         "auto_detect_interface": true,
         "final": "🐠 漏网之鱼",
     "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
-      },
-      { "clash_mode": "direct", "outbound": "direct" },
+      { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
+      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连" },  
