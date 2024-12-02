@@ -23,8 +23,8 @@
   
   "dns": {
     "servers": [
-      {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "client_subnet": "1.0.1.0"},
-      {"tag": "localDns", "address": "https://120.53.53.53/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "direct"},
+      {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "client_subnet": "1.0.1.0"},
+      {"tag": "localDns", "address": "202.96.128.86", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "direct"},
       {"tag": "defaultDns", "address": "https://120.53.53.53/dns-query", "address_strategy": "ipv4_only", "detour": "direct"}
     ],
     "rules": [
@@ -32,27 +32,10 @@
       { "clash_mode": "direct", "server": "localDns" },
       { "clash_mode": "global", "server": "proxyDns" },
       { "rule_set": "geosite-cn", "server": "localDns" },
-      {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "geolocation-!cn",
-            "invert": true
-          },
-          {
-            "rule_set": "geoip-cn"
-          }
-        ],
-        "server": "proxyDns",
-        "client_subnet": "114.114.114.114/24"
-      }
+      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
     ],
-    "strategy": "ipv4_only",
-    "disable_cache": false,
-    "disable_expire": false,
-    "independent_cache": false,
-    "final": "proxyDns"
+    "final": "localDns",
+    "strategy": "ipv4_only"
   },
 
     "inbounds": [
