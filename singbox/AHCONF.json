@@ -65,10 +65,53 @@
     "listen_port": 2080,
     "sniff": true,
     "users": []
-  }
-],
-
+  },
+  {
+      "type": "socks",
+      "listen": "0.0.0.0",
+      "listen_port": 16693,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "rules": [
+        {
+          "type": "field",
+          "port": 16693,
+          "outboundTag": "forward-to-DevPC"
+        }
+      ]
+   },
+   {
+      "type": "socks",
+      "listen": "0.0.0.0",
+      "listen_port": 16690,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "rules": [
+        {
+          "type": "field",
+          "port": 16690,
+          "outboundTag": "forward-to-PC"
+        }
+      ]
+   }
+	],
   "outbounds": [
+	  {
+      "type": "direct",
+      "tag": "forward-to-DevPC",
+      "settings": {
+        "address": "192.168.101.113",
+        "port": 13389
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "forward-to-PC",
+      "settings": {
+        "address": "192.168.101.110",
+        "port": 3389
+      }
+    },
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换", "♻️ 自动选择", "🎯 全球直连"] },
     { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
