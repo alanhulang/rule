@@ -55,24 +55,51 @@
   },
 
     "inbounds": [
-    {
-      "tag": "tun",
-      "type": "tun",
-      "interface_name": "singbox",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
-      "stack": "mixed",
-      "auto_route": true,
-      "sniff": true,
-      "strict_route": true,
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
+      {
+        "type": "tun",
+        "tag": "tun-in",
+        "interface_name": "tun0",
+        "mtu": 9000,
+        "auto_route": true,
+        "iproute2_table_index": 2022,
+        "iproute2_rule_index": 9000,
+        "auto_redirect": false,
+        "auto_redirect_input_mark": "0x2023",
+        "auto_redirect_output_mark": "0x2024",
+        "strict_route": true,
+        "route_address": [
+          "0.0.0.0/1",
+          "128.0.0.0/1",
+          "::/1",
+          "8000::/1"
+        ],
+        "route_exclude_address": [
+          "192.168.0.0/16",
+          "fc00::/7"
+        ],
+        "route_address_set": [
+          "geoip-cloudflare"
+        ],
+        "route_exclude_address_set": [
+          "geoip-cn"
+        ],
+        "endpoint_independent_nat": false,
+        "udp_timeout": "5m",
+        "stack": "mixed",
+        "include_interface": [
+          "lan0"
+        ],
+        "address": [
+          "172.18.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "platform": {
+            "http_proxy": {
+            "enabled": false,
+            "server": "127.0.0.1",
+            "server_port": 8080
+          }
         }
-      }
-    }
   ],
 
   "outbounds": [
