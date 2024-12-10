@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+		"domain_keyword": [
+			"wallhaven",
+			"bygcloud.com",
+			"broadcom.com",
+			"rme-audio.de",
+			"qichiyu.com",
+			"土豆云.com"
+		]
+    }
+  ]
+}
