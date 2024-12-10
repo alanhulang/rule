@@ -132,7 +132,7 @@
     "rule_set": [
       { "tag": "relaygroup", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.srs", "download_detour": "🎯 全球直连" },
       { "tag": "allai", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/allai.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "customProxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.json", "download_detour": "🎯 全球直连" },
+      { "tag": "customProxy", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连" },
