@@ -10,7 +10,7 @@
       "external_controller": "0.0.0.0:9095",
       "external_ui": "/etc/sing-box/ui",
       "secret": "",
-      "external_ui_download_url": "https://ghp.ci/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
       "default_mode": "rule"
     },
@@ -22,36 +22,20 @@
   },
   
   "dns": {
-      "servers": [
-          {"tag": "defaultDns", "address": "https://120.53.53.53/dns-query", "detour": "🎯 全球直连"},
-          {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "client_subnet": "1.0.1.0"}          
-       ],
-      "rules": [
-          { "outbound": "any", "server": "defaultDns"},
-          { "clash_mode": "direct", "server": "defaultDns" },
-          { "clash_mode": "global", "server": "proxyDns" },
-          { "rule_set": "geosite-cn", "server": "defaultDns" },
-          {
-            "type": "logical",
-            "mode": "and",
-            "rules": [
-              {
-                "rule_set": "geosite-geolocation-!cn",
-                "invert": true
-              },
-              {
-                "rule_set": "geoip-cn"
-              }
-            ],
-            "server": "proxyDns",
-            "client_subnet": "114.114.114.114/24"
-          }
-      ],
-      "strategy": "ipv4_only",
-      "disable_cache": false,
-      "disable_expire": false,
-      "independent_cache": false,
-      "final": "proxyDns"
+    "servers": [
+      {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
+      {"tag": "localDns", "address": "223.5.5.5", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"},
+      {"tag": "defaultDns", "address": "223.5.5.5", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"}
+    ],
+    "rules": [
+      { "outbound": "any", "server": "defaultDns", "disable_cache": true },
+      { "clash_mode": "direct", "server": "localDns" },
+      { "clash_mode": "global", "server": "proxyDns" },
+      { "rule_set": "geosite-cn", "server": "localDns" },
+      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
+    ],
+    "final": "localDns",
+    "strategy": "ipv4_only"
   },
 
   "inbounds": [
@@ -122,7 +106,7 @@
       { "rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连" },  
       { "rule_set": "relaygroup", "outbound": "relay01" },
       { "rule_set": "allai", "outbound": "🤖 AI" },  
-      { "rule_set": "twproxy", "outbound": "🇹🇼 台湾自动" },  
+      { "rule_set": "customProxy", "outbound": "🚀 节点选择" },  
       { "rule_set": "geosite-github", "outbound": "👨‍💻 Github" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
       { "rule_set": "geosite-onedrive", "outbound": "🐬 OneDrive" }, 
@@ -139,7 +123,7 @@
     "rule_set": [
       { "tag": "relaygroup", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.srs", "download_detour": "🎯 全球直连" },
       { "tag": "allai", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/allai.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "twproxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/twproxy.json", "download_detour": "🎯 全球直连" },
+      { "tag": "customProxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.json", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连" },
