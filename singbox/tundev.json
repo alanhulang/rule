@@ -92,9 +92,9 @@
       {
         "tag": "relay01",
         "type": "socks",
-        "server": "89.116.56.131",
+        "server": "138.36.95.74",
         "server_port": 50101,
-        "password": "onoapbdSKo",
+        "password": "Pizza1982",
         "version": "5",
         "username": "hl",
         "detour": "BWH"
