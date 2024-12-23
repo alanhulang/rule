@@ -113,7 +113,8 @@
 		{"clash_mode": "global", "outbound": "GLOBAL"},
 		{"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连"},
 	        { "rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连" },  
-	        { "rule_set": "relaygroup", "outbound": "relay01" },
+	        { "rule_set": "customDirect", "outbound": "🎯 全球直连" },
+	        { "rule_set": "relaygroup", "outbound": "relay01" },	        
 	        { "rule_set": "allai", "outbound": "🤖 AI" },  
 	        { "rule_set": "customProxy", "outbound": "🚀 节点选择" },  
 	        { "rule_set": "geosite-github", "outbound": "👨‍💻 Github" },
@@ -130,7 +131,8 @@
     ],
     
     "rule_set": [
-      { "tag": "relaygroup", "type": "remote", "format": "binary", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.srs", "download_detour": "🎯 全球直连" },
+      { "tag": "relaygroup", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.json", "download_detour": "🎯 全球直连" },
+      { "tag": "customDirect", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/direct.json", "download_detour": "🎯 全球直连" },
       { "tag": "allai", "type": "remote", "format": "binary", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/allai.srs", "download_detour": "🎯 全球直连" },
       { "tag": "customProxy", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.json", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
