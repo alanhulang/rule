@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
 	"domain_suffix": [
@@ -14,7 +14,7 @@
 		"talkatone.com",
 		"tktn.at"
 	],
-	"ip-cidr":[
+	"ip_cidr":[
 		"50.117.27.0/24",
 		"69.46.75.0/24",
 		"205.164.56.0/24",
