@@ -131,10 +131,10 @@
     ],
     
     "rule_set": [
-      { "tag": "relaygroup", "type": "remote", "format": "source", "url": "https://ghproxy.cc/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.json", "download_detour": "🎯 全球直连" },
-      { "tag": "customdirect", "type": "remote", "format": "source", "url": "https://ghproxy.cc/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/direct.json", "download_detour": "🎯 全球直连" },
-      { "tag": "allai", "type": "remote", "format": "source", "url": "https://ghproxy.cc/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/ai.json", "download_detour": "🎯 全球直连" },
-      { "tag": "customProxy", "type": "remote", "format": "source", "url": "https://ghproxy.cc/https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.json", "download_detour": "🎯 全球直连" },
+      { "tag": "relaygroup", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/relay.json", "download_detour": "🎯 全球直连" },
+      { "tag": "customdirect", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/direct.json", "download_detour": "🎯 全球直连" },
+      { "tag": "allai", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/ai.json", "download_detour": "🎯 全球直连" },
+      { "tag": "customProxy", "type": "remote", "format": "source", "url": "https://github.com/alanhulang/rule/raw/refs/heads/main/singbox/rules/customProxy.json", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://ghproxy.cc/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://ghproxy.cc/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://ghproxy.cc/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连" },
