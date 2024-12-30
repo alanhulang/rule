@@ -34,7 +34,14 @@
 			"sentry.io",
 			"stripe.com",
 			"bing.com",
-			"turn.livekit.cloud"
+			"turn.livekit.cloud",
+			"bard.google.com",  
+			"deepmind.com",  
+			"deepmind.google",  
+			"gemini.google.com",  
+			"generativeai.google",  
+			"proactivebackend-pa.googleapis.com",
+			"apis.google.com"
 		],
 		"domain": [
 			"api.msn.com",
@@ -56,7 +63,16 @@
 			"services.bingapis.com",
 			"static.cloudflareinsights.com",
 			"sydney.bing.com",
-			"www.bing.com"		]
+			"www.bing.com",
+			"ai.google.dev",  
+			"alkalimakersuite-pa.clients6.google.com",  
+			"makersuite.google.com"
+		],
+	    	"domain_keyword": [
+			"colab",  
+			"developerprofiles",  
+			"generativelanguage" 
+		]
     }
   ]
 }
