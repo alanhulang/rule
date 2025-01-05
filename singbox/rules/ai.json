@@ -71,7 +71,8 @@
 	    	"domain_keyword": [
 			"colab",  
 			"developerprofiles",  
-			"generativelanguage" 
+			"generativelanguage",
+			"notebooklm"
 		]
     }
   ]
