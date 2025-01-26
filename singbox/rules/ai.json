@@ -41,7 +41,8 @@
 			"gemini.google.com",  
 			"generativeai.google",  
 			"proactivebackend-pa.googleapis.com",
-			"apis.google.com"
+			"apis.google.com",
+			"x.com"
 		],
 		"domain": [
 			"api.msn.com",
