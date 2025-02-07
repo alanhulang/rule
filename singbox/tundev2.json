@@ -91,11 +91,11 @@
       {
         "tag": "ProxySeller",
         "type": "socks",
-        "server": "138.36.95.74",
-        "server_port": 50101,
-        "password": "Pizza1982",
+        "server": "res.proxy-seller.com",
+        "server_port": 10000,
+        "password": "RNW78Fm5",
         "version": "5",
-        "username": "hl",
+        "username": "daadfc556cadc29a",
         "detour": "BWH"
       },
       {
