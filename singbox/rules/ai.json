@@ -3,7 +3,7 @@
   "rules": [
     {
 		"domain_suffix": [
-			"openai.com",
+			"perplexity.ai",
 			"bard.google.com",
 			"gemini.google.com",
 			"claude.ai.com",
@@ -67,7 +67,8 @@
 			"www.bing.com",
 			"ai.google.dev",  
 			"alkalimakersuite-pa.clients6.google.com",  
-			"makersuite.google.com"
+			"makersuite.google.com",
+			"aistudio.google.com"
 		],
 	    	"domain_keyword": [
 			"colab",  
