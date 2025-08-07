@@ -3,6 +3,7 @@
   "rules": [
     {
 		"domain_suffix": [
+			"openai.azure.com",
 			"perplexity.ai",
 			"bard.google.com",
 			"gemini.google.com",
