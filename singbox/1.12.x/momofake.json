@@ -35,11 +35,11 @@
     {
         "tag": "ISP_US",
         "type": "shadowsocks",
-        "server": "107.173.156.192",
-        "server_port": 40020,
-        "password": "WbTpyK1d0ydHKgrvdmZuUCtyjKZqMXHKSsDb4tfVxdw=",
+        "server": "XXXXXX",
+        "server_port": XXXXXX,
+        "password": "XXXXXX=",
         "method": "aes-128-gcm",
-        "detour": "BWH"
+        "detour": "XXXXXX"
     },   
     {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
