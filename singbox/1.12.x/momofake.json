@@ -32,7 +32,7 @@
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP_US", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "BWH", "Hostdare", "ISP_US", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🎯 全球直连"]},
-    /*{
+    {
         "tag": "ISP_US",
         "type": "shadowsocks",
         "server": "107.173.156.192",
@@ -40,10 +40,10 @@
         "password": "WbTpyK1d0ydHKgrvdmZuUCtyjKZqMXHKSsDb4tfVxdw=",
         "method": "aes-128-gcm",
         "detour": "BWH"
-    },*/    
+    },   
     {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
-    {"tag": "ISP_US", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["ISP"]}, {"action": "exclude", "keywords": ["免费"]}], "detour": "BWH"},
+    //{"tag": "ISP_US", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["ISP"]}, {"action": "exclude", "keywords": ["免费"]}], "detour": "BWH"},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["新加坡|坡|狮城|SG|Singapore"]}, {"action": "exclude", "keywords": ["免费"]}]},
