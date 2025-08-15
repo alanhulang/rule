@@ -52,7 +52,7 @@
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
-      {"domain_suffix": [ "perplex.ai" ], "outbound": "ISP" },
+      {"domain_suffix": [ "perplexity.ai" ], "outbound": "ISP" },
       {"rule_set": "custom-US", "outbound": "BWH"},
       {"rule_set": "custom-JP", "outbound": "Hostdare"},
       {"rule_set": "custom-ISP", "outbound": "ISP_US"},
