@@ -34,7 +34,7 @@
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🎯 全球直连","🚀 默认代理"]},
     {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
-    {"tag": "ISP", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["isp|ISP"]}], "detour": "BWH"},
+    {"tag": "ISP", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["isp|ISP"]}]},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["新加坡|坡|狮城|SG|Singapore"]}, {"action": "exclude", "keywords": ["免费"]}]},
