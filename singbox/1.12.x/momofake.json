@@ -32,17 +32,9 @@
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🚀 默认代理", "BWH", "Hostdare", "ISP_US", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "🚀 默认代理", "BWH", "Hostdare", "ISP_US", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🎯 全球直连","🚀 默认代理"]},
-    {
-        "tag": "ISP_US",
-        "type": "shadowsocks",
-        "server": "XXXXXX",
-        "server_port": XXXXXX,
-        "password": "XXXXXX=",
-        "method": "aes-128-gcm",
-        "detour": "XXXXXX"
-    },   
     {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
+    {"tag": "ISP", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["isp|ISP"]}]},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["新加坡|坡|狮城|SG|Singapore"]}, {"action": "exclude", "keywords": ["免费"]}]},
@@ -60,6 +52,7 @@
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
+      {"domain_suffix": [ "perplex.ai" ], "outbound": "ISP" },
       {"rule_set": "custom-US", "outbound": "BWH"},
       {"rule_set": "custom-JP", "outbound": "Hostdare"},
       {"rule_set": "custom-ISP", "outbound": "ISP_US"},
@@ -84,7 +77,7 @@
       {"rule_set": "geoip-netflix", "outbound": "🎥 Netflix"},
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
-    "rule_set": [      
+    "rule_set": [
       {"tag": "custom-US", "type": "remote", "format": "source", "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/US.json", "download_detour": "🎯 全球直连"},
       {"tag": "custom-JP", "type": "remote", "format": "source", "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/JP.json", "download_detour": "🎯 全球直连"},
       {"tag": "custom-ISP", "type": "remote", "format": "source", "url": "https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/ISPUS.json", "download_detour": "🎯 全球直连"},
