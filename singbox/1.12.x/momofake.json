@@ -32,8 +32,8 @@
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🚀 默认代理", "BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "🚀 默认代理", "BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🎯 全球直连","🚀 默认代理"]},
-    {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
-    {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
+    {"tag": "BWH", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费|reality|tuic"]}]},
+    {"tag": "Hostdare", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费|reality|tuic"]}]},
     {"tag": "ISP", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["isp|ISP"]}]},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]}, {"action": "exclude", "keywords": ["免费"]}]},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]}, {"action": "exclude", "keywords": ["免费"]}]},
@@ -52,7 +52,38 @@
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
-      {"domain_suffix": [ "perplexity.ai" ], "outbound": "ISP" },
+      {"domain_suffix": 
+        [ 
+          "perplexity.ai",
+          "ipinfo.io",
+          "capitalone.com",
+          "anytimemailbox.com",
+          "okx.com"
+        ], 
+        "outbound": "ISP" 
+      },
+      {"domain_keyword": 
+        [ 
+          "bybit"
+        ], 
+        "outbound": "Hostdare" 
+      },
+      {"domain": 
+        [ 
+          "dcg.microsoft.com"
+        ], 
+        "outbound": "🎯 全球直连" 
+      },
+      {"domain_suffix": 
+        [ 
+          "v2rayssr.com",
+          "qichiyu.com",
+          "github.com",
+          "githubusercontent.com",
+          "itangtalk.com"
+        ], 
+        "outbound": "🚀 默认代理" 
+      },
       {"rule_set": "custom-US", "outbound": "BWH"},
       {"rule_set": "custom-JP", "outbound": "Hostdare"},
       {"rule_set": "custom-ISP", "outbound": "ISP"},
