@@ -11,6 +11,15 @@
       {"clash_mode": "direct", "server": "local"},
       {"clash_mode": "global", "server": "foreign"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
+      {
+        "domain_suffix": [
+          ".lan",
+          ".local",
+          ".internal", // 添加您可能在使用的任何内网后缀
+          "dexterlane.us" // 如果您有指向内网IP的私有域名
+        ],
+        "server": "local" // 使用名为 "local" 的 DNS 服务器 (223.5.5.5)
+      },
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
