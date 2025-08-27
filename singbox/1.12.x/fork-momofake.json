@@ -42,175 +42,153 @@
       }
     ],
     "rules": [
+      {"clash_mode": "direct", "server": "local"},
+      {"clash_mode": "global", "server": "fakeip"},
+      {"query_type": "HTTPS", "action": "reject"},
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {
-        "query_type": "HTTPS",
-        "action": "reject"
-      },
-      {
-        "clash_mode": "direct",
-        "server": "local"
-      },
-      {
-        "clash_mode": "global",
-        "server": "foreign"
-      },
-      {
-        "rule_set": [
-          "geosite-cn",
-          "geosite-steamcn",
-          "geosite-apple"
+      "domain_suffix": [
+      // LAN & Internal Networks
+      ".lan",
+      ".localdomain",
+      ".example",
+      ".invalid",
+      ".localhost",
+      ".test",
+      ".local",
+      ".home.arpa",
+      ".dexterlane.us",
+  
+      // NTP Service Suffixes
+      ".time.edu.cn",
+      ".ntp.org.cn",
+      ".pool.ntp.org",
+      ".time.apple.com",
+  
+      // Microsoft & Windows Services
+      ".microsoft.com",
+      ".azure.com",
+      ".msftconnecttest.com",
+      ".msftncsi.com",
+      ".microsoftonline.com",
+      ".dynamics.com",
+  
+      // Music Streaming
+      ".music.163.com",
+      ".126.net",
+      ".kuwo.cn",
+      ".xiami.com",
+      ".music.migu.cn",
+      ".y.qq.com",
+      
+      // QQ & Tencent
+      ".qq.com",
+      ".tencent.com",
+  
+      // Game Services
+      ".srv.nintendo.net",
+      ".n.n.srv.nintendo.net",
+      ".cdn.nintendo.net",
+      ".stun.playstation.net",
+      ".xboxlive.com",
+      ".battlenet.com.cn",
+      ".wotgame.cn",
+      ".wggames.cn",
+      ".wowsgame.cn",
+      ".wargaming.net",
+      ".square-enix.com",
+      ".finalfantasyxiv.com",
+      ".ffxiv.com",
+      ".ff14.sdo.com",
+      ".uu.163.com",
+  
+      // Routers
+      ".linksys.com",
+      ".linksyssmartwifi.com",
+      ".router.asus.com",
+  
+      // Content Delivery & Streaming
+      ".nflxvideo.net",
+      ".mcdn.bilivideo.cn",
+      ".media.dssott.com",
+  
+      // Banks
+      ".cmbchina.com",
+      ".cmbimg.com",
+  
+      // Other Services
+      ".sandai.net",
+      ".n0808.com"
+    ],
+    "domain": [
+        // NTP Service
+        "time-ios.apple.com",
+        "time1.cloud.tencent.com",
+        
+        // Music Streaming
+        "music.163.com",
+        "musicapi.taihe.com",
+        "music.taihe.com",
+        "songsearch.kugou.com",
+        "trackercdn.kugou.com",
+        "api-jooxtt.sanook.com",
+        "api.joox.com",
+        "joox.com",
+        "y.qq.com",
+        "streamoc.music.tc.qq.com",
+        "mobileoc.music.tc.qq.com",
+        "isure.stream.qqmusic.qq.com",
+        "dl.stream.qqmusic.qq.com",
+        "aqqmusic.tc.qq.com",
+        "amobile.music.tc.qq.com",
+        "music.migu.cn",
+    
+        // QQ Login
+        "localhost.ptlogin2.qq.com",
+        "localhost.sec.qq.com",
+    
+        // Game Services
+        "xnotify.xboxlive.com",
+        "ff.dorado.sdo.com",
+        "ps.res.netease.com",
+    
+        // Apple Software Update
+        "mesu.apple.com",
+        "swscan.apple.com",
+        "swquery.apple.com",
+        "swdownload.apple.com",
+        "swcdn.apple.com",
+        "swdist.apple.com",
+        
+        // Google Services
+        "lens.l.google.com",
+        "stun.l.google.com",
+        "na.b.g-tun.com",
+        "proxy.golang.org",
+        "services.googleapis.cn",
+        "xn--ngstr-lra8j.com",
+    
+        // Other Services
+        "heartbeat.belkin.com",
+        "shark007.net",
+        "local.adguard.org"
         ],
-        "server": "local"
-      },
-{
-  "domain_suffix": [
-    // LAN & Internal Networks
-    ".lan",
-    ".localdomain",
-    ".example",
-    ".invalid",
-    ".localhost",
-    ".test",
-    ".local",
-    ".home.arpa",
-    ".dexterlane.us",
-
-    // NTP Service Suffixes
-    ".time.edu.cn",
-    ".ntp.org.cn",
-    ".pool.ntp.org",
-    ".time.apple.com",
-
-    // Microsoft & Windows Services
-    ".microsoft.com",
-    ".azure.com",
-    ".msftconnecttest.com",
-    ".msftncsi.com",
-    ".microsoftonline.com",
-    ".dynamics.com",
-
-    // Music Streaming
-    ".music.163.com",
-    ".126.net",
-    ".kuwo.cn",
-    ".xiami.com",
-    ".music.migu.cn",
-    ".y.qq.com",
-    
-    // QQ & Tencent
-    ".qq.com",
-    ".tencent.com",
-
-    // Game Services
-    ".srv.nintendo.net",
-    ".n.n.srv.nintendo.net",
-    ".cdn.nintendo.net",
-    ".stun.playstation.net",
-    ".xboxlive.com",
-    ".battlenet.com.cn",
-    ".wotgame.cn",
-    ".wggames.cn",
-    ".wowsgame.cn",
-    ".wargaming.net",
-    ".square-enix.com",
-    ".finalfantasyxiv.com",
-    ".ffxiv.com",
-    ".ff14.sdo.com",
-    ".uu.163.com",
-
-    // Routers
-    ".linksys.com",
-    ".linksyssmartwifi.com",
-    ".router.asus.com",
-
-    // Content Delivery & Streaming
-    ".nflxvideo.net",
-    ".mcdn.bilivideo.cn",
-    ".media.dssott.com",
-
-    // Banks
-    ".cmbchina.com",
-    ".cmbimg.com",
-
-    // Other Services
-    ".sandai.net",
-    ".n0808.com"
-  ],
-  "domain": [
-    // NTP Service
-    "time-ios.apple.com",
-    "time1.cloud.tencent.com",
-    
-    // Music Streaming
-    "music.163.com",
-    "musicapi.taihe.com",
-    "music.taihe.com",
-    "songsearch.kugou.com",
-    "trackercdn.kugou.com",
-    "api-jooxtt.sanook.com",
-    "api.joox.com",
-    "joox.com",
-    "y.qq.com",
-    "streamoc.music.tc.qq.com",
-    "mobileoc.music.tc.qq.com",
-    "isure.stream.qqmusic.qq.com",
-    "dl.stream.qqmusic.qq.com",
-    "aqqmusic.tc.qq.com",
-    "amobile.music.tc.qq.com",
-    "music.migu.cn",
-
-    // QQ Login
-    "localhost.ptlogin2.qq.com",
-    "localhost.sec.qq.com",
-
-    // Game Services
-    "xnotify.xboxlive.com",
-    "ff.dorado.sdo.com",
-    "ps.res.netease.com",
-
-    // Apple Software Update
-    "mesu.apple.com",
-    "swscan.apple.com",
-    "swquery.apple.com",
-    "swdownload.apple.com",
-    "swcdn.apple.com",
-    "swdist.apple.com",
-    
-    // Google Services
-    "lens.l.google.com",
-    "stun.l.google.com",
-    "na.b.g-tun.com",
-    "proxy.golang.org",
-    "services.googleapis.cn",
-    "xn--ngstr-lra8j.com",
-
-    // Other Services
-    "heartbeat.belkin.com",
-    "shark007.net",
-    "local.adguard.org"
-  ],
-  "domain_keyword": [
-    // Broad match for services with many subdomains
-    "time",
-    "ntp",
-    "stun",
-    "xbox",
-    "Mijia"
-  ],
-  "server": "local" // 使用名为 "local" 的 DNS 服务器 (223.5.5.5)
-},
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "fakeip",
-        "rewrite_ttl": 1
-      }
+        "domain_keyword": [
+          // Broad match for services with many subdomains
+          "time",
+          "ntp",
+          "stun",
+          "xbox",
+          "Mijia"
+         ],
+         "server": "local" // 使用名为 "local" 的 DNS 服务器 (223.5.5.5)
+       },
+       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
     "strategy": "ipv4_only",
-    "independent_cache": true
+    "independent_cache": true,
+    "reverse_mapping": true
   },
   "outbounds": [
     {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择", "♻️ 自动选择"]},
@@ -227,9 +205,9 @@
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🎯 全球直连"]},
-    {"tag": "BWH", "type": "selector", "outbounds": null, "use_all_providers": true, "include", "bwh|BWH"},
+    {"tag": "BWH", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "bwh|BWH"},
     {"tag": "Hostdare", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "hostdare|Hostdare"},
-    {"tag": "ISP", "type": "selector", "outbounds": null, "use_all_providers": true, "include":"isp|ISP"},
+    {"tag": "ISP", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "isp|ISP"},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include" :"港|HK|(?i)Hong", "exclude": "日"},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "🇯🇵|JP|jp|日本|日|Japan", "exclude": "HK"},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "新加坡|坡|狮城|SG|Singapore", "exclude": "日"},
@@ -242,31 +220,11 @@
   ],
   "route": {
     "rules": [
-      {
-        "action": "sniff",
-        "sniffer": [
-          "http",
-          "tls",
-          "quic",
-          "dns"
-        ]
-      },     
-      {
-        "inbound": "dns-in",
-        "action": "hijack-dns"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
-      },
+      {"action": "sniff", "sniffer": ["http", "tls", "quic", "dns"]},
+      {"inbound": "dns-in", "action": "hijack-dns"},
+      {"ip_is_private": true, "outbound": "🎯 全球直连"},
+      {"clash_mode": "direct", "outbound": "🎯 全球直连"},
+      {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_suffix": 
         [ 
           "perplexity.ai",
