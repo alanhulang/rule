@@ -2,14 +2,14 @@
   "providers": [
     {
       "type": "remote",
-      "tag": "QCY",
+      "tag": "AHSUB",
       "health_check": {
           "enabled": false,
           "url": "https://www.gstatic.com/generate_204",
           "interval": "10m",
           "timeout": "3s"
       },
-      "url": "http://192.168.10.41:3001/NFsfkHeICpSNO4mvWzJt/download/collection/singbox?target=sing-box",
+      "url": "http://192.168.101.102:3001/cj2WVgLL5KORqamYu389/download/collection/subGroup?target=sing-box",
       "exclude": "官网|剩余|流量|套餐|免费|订阅|全球直连|到期时间|GB|Expire Date|Traffic|ExpireDate",
       "download_detour": "🎯 全球直连",
       "update_interval": "12h"
@@ -27,6 +27,7 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
+      {"domain_suffix": [".lan",".local",".internal","dexterlane.us"],"server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
@@ -49,6 +50,9 @@
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🎯 全球直连"]},
+    {"tag": "BWH", "type": "selector", "outbounds": null, "use_all_providers": true, "filter": [{"action": "include", "keywords": ["bwh|BWH"]}, {"action": "exclude", "keywords": ["免费"]}]},
+    {"tag": "Hostdare", "type": "selector", "outbounds": null, "use_all_providers": true, "filter": [{"action": "include", "keywords": ["hostdare|Hostdare"]}, {"action": "exclude", "keywords": ["免费"]}]},
+    {"tag": "ISP", "type": "selector", "outbounds": null, "use_all_providers": true, "filter": [{"action": "include", "keywords": ["isp|ISP"]}]},
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include" :"港|HK|(?i)Hong", "exclude": "日"},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "🇯🇵|JP|jp|日本|日|Japan", "exclude": "HK"},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "新加坡|坡|狮城|SG|Singapore", "exclude": "日"},
@@ -66,6 +70,41 @@
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
+      {"domain_suffix": 
+        [ 
+          "perplexity.ai",
+          "ipinfo.io",
+          "capitalone.com",
+          "anytimemailbox.com",
+          "okx.com"
+        ], 
+        "outbound": "ISP" 
+      },
+      {"domain_keyword": 
+        [ 
+          "bybit"
+        ], 
+        "outbound": "Hostdare" 
+      },
+      {"domain": 
+        [ 
+          "dcg.microsoft.com"
+        ], 
+        "outbound": "🎯 全球直连" 
+      },
+      {"domain_suffix": 
+        [ 
+          "v2rayssr.com",
+          "qichiyu.com",
+          "github.com",
+          "githubusercontent.com",
+          "itangtalk.com"
+        ], 
+        "outbound": "🚀 默认代理" 
+      },
+      {"rule_set": "custom-US", "outbound": "BWH"},
+      {"rule_set": "custom-JP", "outbound": "Hostdare"},
+      {"rule_set": "custom-ISP", "outbound": "ISP"},
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},
       {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
       {"rule_set": "geosite-google", "outbound": "🍀 Google"},
@@ -88,26 +127,29 @@
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
     "rule_set": [
-      {"tag": "geosite-ai", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-onedrive", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/onedrive.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-microsoft", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-telegram", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-tiktok", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-netflix", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-paypal", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/paypal.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-steamcn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-steam", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
+      {"tag": "custom-US", "type": "remote", "format": "source", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/US.json", "download_detour": "🎯 全球直连"},
+      {"tag": "custom-JP", "type": "remote", "format": "source", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/JP.json", "download_detour": "🎯 全球直连"},
+      {"tag": "custom-ISP", "type": "remote", "format": "source", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/alanhulang/rule/refs/heads/main/singbox/rules/ISPUS.json", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-ai", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-onedrive", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/onedrive.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-microsoft", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-apple", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-telegram", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-tiktok", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-netflix", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-paypal", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/paypal.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-steamcn", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-steam", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://git.dexterlane.us/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],
     "final": "🐠 漏网之鱼",
     "default_domain_resolver": {"server": "public"}
@@ -164,7 +206,7 @@
     "clash_api": {
       "external_controller": "0.0.0.0:9095",
       "external_ui": "/etc/momo/run/ui",
-      "external_ui_download_url": "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_url": "https://git.dexterlane.us/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
       "secret": "",
       "default_mode": "rule"
