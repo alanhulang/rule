@@ -75,6 +75,7 @@
         ], 
         "outbound": "🎯 全球直连" 
       },
+      { "domain_suffix": ["eset.com","googleapis.cn","xn--ngstr-lra8j.com"], "outbound": "🎯 全球直连" },
       {"domain_suffix": 
         [ 
           "v2rayssr.com",
