@@ -186,23 +186,24 @@
     "reverse_mapping": true
   },
   "outbounds": [
-    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择", "♻️ 自动选择"]},
-    {"tag": "🧠 AI", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
-    {"tag": "📹 YouTube", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🍀 Google", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "👨‍💻 Github", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇭🇰 香港手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "📲 Telegram", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇸🇬 狮城手动", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🎵 TikTok", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🎥 Netflix", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "💶 PayPal", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🪟 Microsoft", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["BWH", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
-    {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
+    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择", "♻️ 自动选择"]},
+    {"tag": "🧠 AI", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
+    {"tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇯🇵 日本手动", "🇭🇰 香港手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇸🇬 狮城手动", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "💶 PayPal", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🚀 默认代理","BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "BWH", "DMIT", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🎯 全球直连"]},
     {"tag": "BWH", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "bwh|BWH"},
+    {"tag": "DMIT", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "dmit|dmit"},
     {"tag": "Hostdare", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "hostdare|Hostdare"},
-    {"tag": "ISP", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "isp|ISP"},
+    { "tag": "ISP", "type": "selector", "outbounds": ["🇨🇦 ISP-CA"] },
     {"tag": "🇭🇰 香港手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include" :"港|HK|(?i)Hong", "exclude": "日"},
     {"tag": "🇯🇵 日本手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "🇯🇵|JP|jp|日本|日|Japan", "exclude": "HK"},
     {"tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": null, "use_all_providers": true, "include": "新加坡|坡|狮城|SG|Singapore", "exclude": "日"},
@@ -211,6 +212,7 @@
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": null, "fallback": { "enabled": true, "max_delay": "200ms" }, "use_all_providers": true, "interval": "10m","exclude":"网站|流量|地址|剩余|过期|免费|时间|有效|Traffic|ExpireDate|GB|Expire Date"},
     {"tag": "🍃 延迟辅助", "type": "urltest", "outbounds": ["🚀 默认代理", "🎯 全球直连"]},
     {"tag": "GLOBAL", "type": "selector", "outbounds": ["🚀 默认代理", "🧠 AI", "📹 YouTube", "🍀 Google", "👨‍💻 Github", "📲 Telegram", "🎵 TikTok", "🎥 Netflix", "💶 PayPal", "🎮 Steam", "🪟 Microsoft", "🐬 OneDrive", "🍏 Apple", "🐠 漏网之鱼", "BWH", "Hostdare", "ISP", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择", "♻️ 自动选择", "🍃 延迟辅助", "🎯 全球直连"]},
+	  { "tag": "🇨🇦 ISP-CA", "type": "shadowsocks", "server": "107.173.156.192", "server_port": 40020, "method": "aes-128-gcm", "password": "WbTpyK1d0ydHKgrvdmZuUCtyjKZqMXHKSsDb4tfVxdw=", "detour": "BWH" },
     {"tag": "🎯 全球直连", "type": "direct"}
   ],
   "route": {
@@ -226,9 +228,24 @@
           "ipinfo.io",
           "capitalone.com",
           "anytimemailbox.com",
-          "okx.com"
+          "okx.com",
+          "oapi.uk",
+          "aistudio.google.com"
         ], 
         "outbound": "ISP" 
+      },
+     {"domain_suffix": 
+        [ 
+          "oapi.uk",        
+          "dmit.io"
+        ], 
+        "outbound": "BWH"
+      },
+     {"domain_suffix": 
+        [ 
+          "bygcloud.com"
+        ], 
+        "outbound": "DMIT"
       },
       {"domain_keyword": 
         [ 
@@ -242,7 +259,9 @@
         ], 
         "outbound": "🎯 全球直连" 
       },
-      { "domain_suffix": ["eset.com","googleapis.cn","xn--ngstr-lra8j.com"], "outbound": "🎯 全球直连" },
+      { "domain_suffix": ["eset.com",
+          "eset.systems",
+          "e5.sk"], "outbound": "🎯 全球直连" },
       {"domain_suffix": 
         [ 
           "v2rayssr.com",
