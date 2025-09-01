@@ -28,12 +28,7 @@
         "server": "dns.alidns.com",
         "domain_resolver": "local"
       },
-      {
-        "tag": "foreign",
-        "type": "https",
-        "server": "dns.google",
-        "domain_resolver": "local"
-      },
+      {"tag": "foreign", "type": "https", "server": "8.8.8.8", "detour": "🚀 默认代理"},
       {
         "tag": "fakeip",
         "type": "fakeip",
